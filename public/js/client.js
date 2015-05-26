@@ -44,11 +44,18 @@ $(document).ready(function() {
 		voted = false;
 		console.log('e1 ,', emotionList[data.emotion]);
 		console.log('e2 ,', emotionList2[data.emotion]);
-		$('#choice-one').html(emotionList[data.emotion]);
-		$('#choice-two').html(emotionList2[data.emotion]);
+		$('#parent').html(
+			'<div id="select"><h1>select</h1></div>'
+		+	'<div class="choice" id="choice-one">'+emotionList[data.emotion]+'</div>'
+		+	'<div id="or"><h1>or</h1></div>'
+		+	'<div class="choice" id="choice-two">'+emotionList2[data.emotion]+'</div>');
+		
+		//$('#choice-one').html(emotionList[data.emotion]);
+		//$('#choice-two').html(emotionList2[data.emotion]);
 	})
 
-	$('.choice').click(function() {
+	$(document).on('tap', '.choice', function(){
+		var selected = $(this).attr('id');
 		if (!voted){
 		socket.emit('vote', {
 			vote: $(this).attr('id'),
@@ -57,6 +64,15 @@ $(document).ready(function() {
 		console.log('which vote ', $(this).attr('id'));
 		voted = true;
 		}
+
+		//if ($(this).attr('id') == 'choice-one'){
+		$('#parent').html(
+			'<div id="select"><h1>you</br>selected</h1></div><div class="ur-choice">'+$('#choice-one').val()+'</div>');
+
+		//} else if ($(this).attr('id') == 'choice-two'){
+
+		//}
+
 	})
 
 })
