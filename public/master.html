@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://localhost:8000/socket.io/socket.io.js"></script>
+	<script src="./lib/jquery-2.1.3.min.js"></script>
+	<script src="./js/master.js"></script>
+
+	<style>
+		#parent{
+			background: #999;
+			padding: 10px;
+		}
+
+		#winner{
+			background: #ccc;
+			height: 800px;
+			margin: 20px;
+			text-align: center;
+			vertical-align: middle;
+			display: block;
+			line-height: 800px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="parent">
+	<div id="up-next"></div>
+		<div id="winner"></div>
+	</div>
+
+</body>
+</html>
