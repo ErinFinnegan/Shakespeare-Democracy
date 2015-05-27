@@ -44,33 +44,35 @@ $(document).ready(function() {
 		voted = false;
 		console.log('e1 ,', emotionList[data.emotion]);
 		console.log('e2 ,', emotionList2[data.emotion]);
-		$('#parent').html(
-			'<div id="select"><h1>select</h1></div>'
-		+	'<div class="choice tk-de-walpergens-pica" id="choice-one">'+emotionList[data.emotion]+'</div>'
-		+	'<div id="or"><h1>or</h1></div>'
-		+	'<div class="choice tk-de-walpergens-pica" id="choice-two">'+emotionList2[data.emotion]+'</div>');
-		
-		//$('#choice-one').html(emotionList[data.emotion]);
-		//$('#choice-two').html(emotionList2[data.emotion]);
+
+    $('#parent').addClass('transition');
+    setTimeout(function() {
+  		$('#parent').removeClass('transition').html(
+  			'<div id="select"><h1>select</h1></div>'
+  		+	'<div class="choice tk-de-walpergens-pica" id="choice-one"><em>'+emotionList[data.emotion]+'</em></div>'
+  		+	'<div id="or"><h1>or</h1></div>'
+  		+	'<div class="choice tk-de-walpergens-pica" id="choice-two"><em>'+emotionList2[data.emotion]+'</em></div>');
+    }, 200);
 	})
 
 	$(document).on('tap', '.choice', function(){
 		var selected = $(this).attr('id');
 		if (!voted){
-		socket.emit('vote', {
-			vote: $(this).attr('id'),
-			id: myID
-		})
-		console.log('which vote ', $(this).attr('id'));
-		voted = true;
+  		socket.emit('vote', {
+  			vote: $(this).attr('id'),
+  			id: myID
+  		})
+  		console.log('which vote ', $(this).attr('id'));
+  		voted = true;
 		}
 
-		$('#parent').html(
-			'<div id="select"><h1>you</br>selected</h1></div>'
-		+	'<div class="ur-choice tk-de-walpergens-pica">'+$('#'+selected).text()+'</div>'
-		+	'<div><h1>please wait...</h1></div>');
-
-
+    $('#parent').addClass('transition');
+    setTimeout(function() {
+  		$('#parent').removeClass('transition').html(
+  			'<div id="select"><h1>you</br>selected</h1></div>'
+  		+	'<div class="ur-choice tk-de-walpergens-pica"><em>' + $('#'+selected).text() + '</em></div>'
+  		+	'<div><h1>please wait...</h1></div>');
+    },200);
 	})
 
 })
