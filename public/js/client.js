@@ -66,7 +66,9 @@ $(document).ready(function() {
 		}
 
 		$('#parent').html(
-			'<div id="select"><h1>you</br>selected</h1></div><div class="ur-choice tk-de-walpergens-pica">'+$('#'+selected).text()+'</div>');
+			'<div id="select"><h1>you</br>selected</h1></div>'
+		+	'<div class="ur-choice tk-de-walpergens-pica">'+$('#'+selected).text()+'</div>'
+		+	'<div><h1>please wait...</h1></div>');
 
 
 	})
