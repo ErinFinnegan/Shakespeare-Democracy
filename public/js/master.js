@@ -36,7 +36,7 @@ $(document).ready(function(){
 			winner = emotionList2[data.emotion]
 		}
 		$('#winner').html(winner);
-		$('#up-next').html(emotionList[data.emotion + 1] + "&nbsp;" + emotionList2[data.emotion + 1]);
+		$('#next').html(emotionList[data.emotion + 1] + "&nbsp;" + "|"+ "&nbsp;" + emotionList2[data.emotion + 1]);
 		console.log('e1 ', emotionList[data.emotion + 1], " ", 'e2 ', emotionList2[data.emotion + 1]);
 	});
 

@@ -1,0 +1,175 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#pg-start {
+	background: black;
+}
+
+#logo-stuff {
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 10%;
+	z-index: 0;
+}
+
+#logo-masks {
+	width: 50%;
+}
+
+#logotype {
+	width: 70%;
+	margin-top: -5%;
+}
+
+.sparkles {
+	z-index: 10;
+	position: fixed;
+	width: 5%;
+}
+
+#sparkle1 {
+	float: right;
+	padding-left: 10%;
+	padding-top: 50%;
+}
+
+#sparkle2 {
+	padding-left: 60%;
+}
+
+#sparkle3 {
+	padding-left: 20%;
+	padding-top: 15%;
+}
+
+#start-bttn {
+	background: #0cd7f2;
+	border: none;
+  	/*text-shadow: none;*/
+  	margin: 0px 10%;
+  	font-size: 2em;
+  	text-shadow: 0 0.5px 0 #f3f3f3;
+  	box-shadow: 0px 0.1em 0px #a9a9a9;
+  	margin-bottom: 2em;
+}
+
+/*************** voting page **********/
+#pg-vote {
+	background: #cdcdcd;
+	/*border: 2em;
+	border-color: #cdcdcd;*/
+}
+
+#parent {
+	background-color: #dbdbdb;
+	min-height: 40em;
+	margin-top: -1em;
+}
+
+.choice {
+	width: 70%;
+  /* height: 6em; */
+	border-radius: 1em;
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	box-shadow: 0px 0.3em 0px black;
+	font-size: 2em;
+	color: white;
+}
+
+#choice-one {
+	background-color: #e73915;
+	text-shadow: 0 0.5px 0 #a9a9a9;
+}
+
+#choice-two {
+	background-color: #0cd7f2;
+	text-shadow: 0 0.5px 0 #f3f3f3;
+}
+
+h1 {
+	text-align: center;
+	color: #a9a9a9;
+}
+
+h3 {
+	text-align: center;
+	/*color: #a9a9a9;*/
+	margin:0;
+}
+
+h2 {
+	font-family: "de-walpergens-pica";
+}
+
+#select h1{
+	padding-top: 2em;
+}
+
+#or h1{
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+}
+
+/*************** you selected **********/
+.ur-choice {
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	font-size: 3em;
+}
+
+/*************** master page **********/
+#master-parent {
+	background-image: url("/assets/images/pattern.svg");
+	background-size: 6em 6em;
+	/*background-repeat: repeat-x;*/
+	/*min-height: 700px;*/
+	/*width: 100%;*/
+	padding: 0;
+	margin: 0;
+	min-height: 50em;
+	position: fixed;
+	/*background: red;*/
+	width: 100%;
+}
+
+#winner{
+	background: white;
+	min-height: 4em;
+	margin: 1em 1em 0em 1em;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	border: 0.1em solid black;
+	font-size: 5em;
+	padding-top: 2em;
+	/*line-height: 800px;*/
+}
+
+#up-next-1 {
+	background: black;
+	width: 20%;
+	height: 10em;
+	z-index: 100;
+	position: fixed;
+	color: white;
+	padding-top: 2em;
+}
+
+#up-next-1 h1 {
+	color: white;
+}
+
+#next {
+	color: white;
+	z-index: 101;
+}
