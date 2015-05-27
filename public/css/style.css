@@ -67,6 +67,10 @@ body {
 	background-color: #dbdbdb;
 	min-height: 40em;
 	margin-top: -1em;
+  transition: opacity .15s ease-out;
+}
+#parent.transition {
+  opacity: 0;
 }
 
 .choice {
@@ -74,7 +78,7 @@ body {
   /* height: 6em; */
 	border-radius: 1em;
 	display: block;
-	margin: 0px auto;
+	margin: 0 auto .8em auto;
 	text-align: center;
 	padding-top: 2em;
 	padding-bottom: 2em;
@@ -92,6 +96,7 @@ body {
 	background-color: #0cd7f2;
 	text-shadow: 0 0.5px 0 #f3f3f3;
 }
+
 
 h1 {
 	text-align: center;
@@ -141,35 +146,73 @@ h2 {
 	/*background: red;*/
 	width: 100%;
 }
+#master-parent #logo-stuff {
+  padding-top: 5em;
+}
+#master-parent #logo-masks {
+  max-height: 250px;
+}
+#master-parent #logotype {
+  max-height: 250px;
+  margin-top: -1em;
+}
+#master-parent #start-bttn {
+  max-width: 500px;
+  margin: 0 auto;
+}
 
-#winner{
+#pg-results {
+  background: transparent;
+}
+
+#winner {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
 	background: white;
-	min-height: 4em;
-	margin: 1em 1em 0em 1em;
 	text-align: center;
 	vertical-align: middle;
 	display: block;
 	border: 0.1em solid black;
 	font-size: 5em;
-	padding-top: 2em;
-	/*line-height: 800px;*/
+  display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+#winner em {
+  width: 100%;
 }
 
 #up-next-1 {
 	background: black;
-	width: 20%;
-	height: 10em;
+  min-width: 20%;
+/*  height: 10em;*/
 	z-index: 100;
 	position: fixed;
+  top: 5em;
+  right: 0;
 	color: white;
 	padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 #up-next-1 h1 {
 	color: white;
+  margin: 0;
+  padding: .1em 0 .3em 0;
 }
 
-#next {
+#up-next-words {
 	color: white;
 	z-index: 101;
+  font-size: 1.5em;
+  text-align: center;
+  padding: .5em 0;
+  
 }

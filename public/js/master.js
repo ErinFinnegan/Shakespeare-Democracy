@@ -10,8 +10,8 @@ $(document).ready(function(){
 		var emotionText = this.responseText;
 		console.log('e1 ', emotionText);
 		emotionList = emotionText.split('\n');
-		$('#winner').html(emotionList[0]);
-		$('#up-next').html(emotionList[0]);
+		$('#winner').html('<em>' + emotionList[0] + '</em>');
+		$('#up-next-words').html('<em>' + emotionList[0] + '</em>');
 	}
 	request.open('GET', '../assets/emotions.txt', true);
 	request.send();
@@ -35,12 +35,9 @@ $(document).ready(function(){
 		}else{
 			winner = emotionList2[data.emotion]
 		}
-		$('#winner').html(winner);
-		$('#next').html(emotionList[data.emotion + 1] + "&nbsp;" + "|"+ "&nbsp;" + emotionList2[data.emotion + 1]);
+		$('#winner').html('<em>' + winner + '</em>');
+		$('#up-next-words').html('<em>' + emotionList[data.emotion + 1] + '</em> &nbsp;|&nbsp; <em>' + emotionList2[data.emotion + 1] + '</em>');
 		// console.log('e1 ', emotionList[data.emotion + 1], " ", 'e2 ', emotionList2[data.emotion + 1]);
-
-		$('#up-next-1').html('hello');
-
 	});
 
 
