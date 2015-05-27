@@ -37,7 +37,10 @@ $(document).ready(function(){
 		}
 		$('#winner').html(winner);
 		$('#next').html(emotionList[data.emotion + 1] + "&nbsp;" + "|"+ "&nbsp;" + emotionList2[data.emotion + 1]);
-		console.log('e1 ', emotionList[data.emotion + 1], " ", 'e2 ', emotionList2[data.emotion + 1]);
+		// console.log('e1 ', emotionList[data.emotion + 1], " ", 'e2 ', emotionList2[data.emotion + 1]);
+
+		$('#up-next-1').html('hello');
+
 	});
 
 
